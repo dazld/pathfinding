@@ -3,11 +3,14 @@ var util = require('util');
 var fs = require('fs');
 var helpers = require('./lib/helpers');
 
+// data
+var locations = require('./data/places');
+
 // constructor for location obj
 var Location = require('./lib/Location');
 
 // start locations
-var locations = ['Town', 'City', 'Village', 'Shack', 'Small City', 'Big City', 'Mid City', 'Terminus', 'Home', 'Work'].sort();
+
 var routes = {};
 
 var addLocation = function(name, paths) {
@@ -22,7 +25,7 @@ var addLocation = function(name, paths) {
 	}
 
 
-	var numConnections = helpers.randomInt(Math.floor(locations.length / 3),true);
+	var numConnections = helpers.randomInt(Math.floor(locations.length / 3), true);
 	var connections = helpers.randomMembers(numConnections, name, locations);
 
 	connections.forEach(function(item) {
@@ -63,7 +66,7 @@ locations.forEach(function(loc) {
 });
 
 console.dir(routes);
-fs.writeFileSync(__dirname + '/out.json', JSON.stringify(routes, null, 4));
+fs.writeFileSync(__dirname + '/data/out.json', JSON.stringify(routes, null, 4));
 
 
 module.exports = routes;
