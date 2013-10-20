@@ -1,0 +1,90 @@
+{
+    "Shack": {
+        "name": "Shack",
+        "connections": {
+            "Big City": 5,
+            "Mid City": 9,
+            "Village": 4,
+            "Town": 2
+        }
+    },
+    "Big City": {
+        "name": "Big City",
+        "connections": {
+            "Shack": 5,
+            "Home": 1,
+            "Small City": 3,
+            "Village": 1
+        }
+    },
+    "Work": {
+        "name": "Work",
+        "connections": {
+            "City": 8,
+            "Small City": 8,
+            "Terminus": 10,
+            "Village": 1,
+            "Town": 10
+        }
+    },
+    "City": {
+        "name": "City",
+        "connections": {
+            "Work": 8,
+            "Mid City": 3
+        }
+    },
+    "Mid City": {
+        "name": "Mid City",
+        "connections": {
+            "Home": 6,
+            "Shack": 9,
+            "Village": 10,
+            "City": 3,
+            "Terminus": 5,
+            "Town": 3
+        }
+    },
+    "Home": {
+        "name": "Home",
+        "connections": {
+            "Mid City": 6,
+            "Big City": 1
+        }
+    },
+    "Village": {
+        "name": "Village",
+        "connections": {
+            "Mid City": 10,
+            "Shack": 4,
+            "Terminus": 7,
+            "Big City": 1,
+            "Work": 1
+        }
+    },
+    "Town": {
+        "name": "Town",
+        "connections": {
+            "Shack": 2,
+            "Mid City": 3,
+            "Small City": 2,
+            "Work": 10
+        }
+    },
+    "Small City": {
+        "name": "Small City",
+        "connections": {
+            "Work": 8,
+            "Big City": 3,
+            "Town": 2
+        }
+    },
+    "Terminus": {
+        "name": "Terminus",
+        "connections": {
+            "Mid City": 5,
+            "Village": 7,
+            "Work": 10
+        }
+    }
+}
