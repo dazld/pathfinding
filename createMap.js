@@ -31,15 +31,20 @@ for (var route in routes){
 	};
 
 	var location = routes[route];
-
+	ctx.fillStyle = 'rgba(32,32,32,0.5)';
 	ctx.beginPath();
 	ctx.arc(location.location.x, location.location.y, location.size, 0, Math.PI*2, true); 	
 	ctx.closePath();
+	ctx.font = '14px Helvetica Neue';
+	
+	ctx.fillText(route, location.location.x+location.size, location.location.y-location.size);
+
 	for (var connection in location.connections){
 		if (!location.connections.hasOwnProperty(connection)) {
 			continue;
 		};
-
+		ctx.lineWidth = '0.5';
+		ctx.strokeStyle = 'rgba(32,32,32,0.5)';
 		ctx.moveTo(location.location.x, location.location.y);
 		ctx.lineTo(routes[connection].location.x,routes[connection].location.y);
 		ctx.stroke();
