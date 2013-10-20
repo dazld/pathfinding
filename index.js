@@ -27,6 +27,7 @@ var addLocation = function(name, paths) {
 
 	var numConnections = helpers.randomInt(Math.floor(locations.length / 3), true);
 	var connections = helpers.randomMembers(numConnections, name, locations);
+	
 
 	connections.forEach(function(item) {
 
