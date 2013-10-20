@@ -1,0 +1,6 @@
+{
+  "name": "pathfinding",
+  "dependencies": {
+    "browserify": "~2.34.3"
+  }
+}
