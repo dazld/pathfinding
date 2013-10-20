@@ -1,6 +1,7 @@
 {
   "name": "pathfinding",
   "dependencies": {
-    "browserify": "~2.34.3"
+    "browserify": "~2.34.3",
+    "canvas": "~1.1.1"
   }
 }

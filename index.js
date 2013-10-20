@@ -41,7 +41,7 @@ var addLocation = function(name, paths) {
 			if (!routes[item]) {
 				routes[item] = new Location(item);
 			}
-
+			distance = Math.floor(location.getDistance(routes[item].location.x,routes[item].location.y));
 			routes[item].addConnection(name, distance);
 
 		}
@@ -66,7 +66,7 @@ locations.forEach(function(loc) {
 
 });
 
-console.dir(routes);
+// console.dir(routes);
 fs.writeFileSync(__dirname + '/data/out.json', JSON.stringify(routes, null, 4));
 
 
