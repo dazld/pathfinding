@@ -25,12 +25,16 @@ var dims = {
 	height: 800
 };
 
+
+var BinaryTree = require('./lib/binary-tree');
+
 for (var route in routes){
 	if (!routes.hasOwnProperty(route)) {
 		continue;
 	};
 
 	var location = routes[route];
+
 	ctx.fillStyle = 'rgba(32,32,32,0.5)';
 	ctx.beginPath();
 	ctx.arc(location.location.x, location.location.y, location.size, 0, Math.PI*2, true); 	
